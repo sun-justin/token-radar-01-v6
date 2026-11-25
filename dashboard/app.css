@@ -1,0 +1,62 @@
+/* Launch Radar v6 — dark, dense, board-first. No network, no webfonts. */
+:root{
+  --bg:#0d1220; --panel:#151c2e; --panel2:#1a2236; --line:#26324e; --line2:#33415f;
+  --text:#e8ecf4; --muted:#93a0b8; --dim:#6b7894; --accent:#3ddc97; --gold:#f5c96b;
+  --red:#e06c5b; --blue:#6aa9e0; --violet:#b48ce0;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--blue)}
+.wrap{max-width:1440px;margin:0 auto;padding:18px 22px 40px}
+header{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:2px solid var(--line2);padding-bottom:10px}
+h1{font-size:26px;margin:0;letter-spacing:.04em}
+h1 .dot{color:var(--accent)}
+.sub{color:var(--muted);font-size:13px}
+.right{margin-left:auto;color:var(--muted);font-size:13px;text-align:right}
+.right b{color:var(--text)}
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:14px 0}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.kpi .k{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.kpi .v{font-size:22px;font-weight:700;margin-top:2px}
+.kpi .v small{font-size:13px;color:var(--muted);font-weight:400}
+.kpi .d{font-size:12px;color:var(--muted);margin-top:2px}
+.note{background:var(--panel2);border-left:4px solid var(--accent);border-radius:4px;padding:10px 14px;margin:0 0 14px;font-size:13px;color:var(--text)}
+.note b{color:var(--accent)}
+.toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 10px}
+.toolbar input[type=search]{background:var(--panel);border:1px solid var(--line2);color:var(--text);border-radius:6px;padding:7px 10px;min-width:220px}
+.toolbar select{background:var(--panel);border:1px solid var(--line2);color:var(--text);border-radius:6px;padding:7px}
+.pill{border:1px solid var(--line2);background:var(--panel);color:var(--muted);border-radius:20px;padding:6px 12px;cursor:pointer;font-size:13px}
+.pill.on{background:var(--accent);border-color:var(--accent);color:#06281a;font-weight:700}
+.count{margin-left:auto;color:var(--muted);font-size:13px}
+table{width:100%;border-collapse:collapse;background:var(--panel)}
+th,td{padding:7px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);position:sticky;top:0;background:var(--panel2)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:hover td{background:var(--panel2)}
+.name{font-weight:700}
+.meta{font-size:12px;color:var(--muted)}
+.badge{display:inline-block;border-radius:4px;padding:2px 8px;font-size:12px;font-weight:700}
+.badge.FARM{background:#123f2c;color:var(--accent)}
+.badge.MARGINAL{background:#3d2f10;color:var(--gold)}
+.badge.SKIP{background:#3d1a16;color:var(--red)}
+.badge.LIVE{background:#1d2f4d;color:var(--blue)}
+.badge.UNPRICED,.badge.EXCHANGE,.badge.WRAPPED,.badge.BRIDGE,.badge.VERSIONED{background:#2a2f3d;color:var(--muted)}
+.pos{color:var(--accent)} .neg{color:var(--red)}
+.evidence{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.card h2{font-size:14px;margin:0 0 6px;letter-spacing:.05em;text-transform:uppercase;color:var(--gold)}
+.card h3{font-size:13px;margin:12px 0 4px;color:var(--text)}
+.card p{font-size:13px;color:var(--muted);margin:4px 0}
+.card table{background:transparent}
+.card td,.card th{padding:5px 7px}
+.acct{display:flex;height:14px;border-radius:3px;overflow:hidden;margin:8px 0 4px}
+.acct span{display:block;height:100%}
+.legend{font-size:12px;color:var(--muted)}
+.strip{background:#0f2a1c;border:1px solid #1e5c3a;border-radius:6px;padding:9px 12px;font-size:13px;margin-top:14px;color:#bfe9cf}
+.strip b{color:var(--accent)}
+.detail h2{font-size:20px;margin:4px 0}
+.detail .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
+.steps{margin:8px 0 0;padding-left:20px}
+.steps li{margin:5px 0;font-size:13px}
+footer{margin-top:22px;border-top:1px solid var(--line);padding-top:10px;color:var(--dim);font-size:12px}
+@media (max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}.evidence,.detail .grid{grid-template-columns:1fr}}
